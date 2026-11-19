@@ -65,9 +65,10 @@ def text_block(draw, xy, text, fnt, fill, max_w, leading):
 # ---------------------------------------------------------------- icons
 def icon_summit(d, cx, cy):
     # three circles in a row, slightly overlapping: three flags' colours
-    r = 19
-    for dx, colour in ((-26, (178, 34, 44)), (0, (198, 146, 32)),
-                       (26, (38, 74, 150))):
+    # (kept narrow enough to clear the headline text at cx + 46)
+    r = 16
+    for dx, colour in ((-22, (178, 34, 44)), (0, (198, 146, 32)),
+                       (22, (38, 74, 150))):
         d.ellipse([cx + dx - r, cy - r, cx + dx + r, cy + r], fill=colour)
 
 
